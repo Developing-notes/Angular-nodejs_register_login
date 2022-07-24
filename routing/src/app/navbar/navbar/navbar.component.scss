@@ -1,0 +1,35 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+/* headersection */
+#overall{
+    background-color: black;
+    color: darkred;
+}
+.logo{
+    width:6rem;
+    position: relative;
+    top: 2.4em;
+    border-radius: 10em;
+    // margin: 3px;
+}
+ul,li{
+    display: inline-block;
+    position:relative;
+    left: 20rem;
+    padding: 0.3em;
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+     position: relative;
+
+}
+.navbutton{
+    position: relative;
+    left: 60em;
+}

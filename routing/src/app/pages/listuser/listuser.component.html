@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+
+            <div class="form-group text-center">
+                <label for="">searchbar</label>
+                <input type="text" name="searchText" [(ngModel)]="searchText">
+
+
+                <table *ngIf="(arr | filter:searchText).length>0;"></table>
+            </div>
+        </div>
+        <div class="col-6">
+            <button class="btn btn-warning" type="submit" (click)="getUser()">
+                Userlists
+            </button>
+            <!-- {{arr | json}} -->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">S.no</th>
+                        <th scope="col">E-Mail</th>
+                        <th scope="col">UserName</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of arr|filter:searchText;
+                    let userindex = index">
+                        <th scope="row">{{ userindex + 1 }}</th>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.username }}</td>
+                        <!-- <td><button (click)="viewProfile(user._id)">view</button></td> -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

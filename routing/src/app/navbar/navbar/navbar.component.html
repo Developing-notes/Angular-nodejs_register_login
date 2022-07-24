@@ -1,0 +1,19 @@
+<!-- header-start -->
+
+<div id="overall">
+    <div>
+        <img class="logo" src="assets/images/logo.jpeg" alt="">
+    </div>
+    <!-- <ul class="navbutton">
+        <a class="btn btn-primary" role="button" 
+        (click)="setRegister()">Registeration</a>
+        <a class="btn btn-warning text-dark" 
+         role="button" (click)="viewRecord()">Login</a>
+    </ul> -->
+    <ul class="navbutton" *ngFor="let menuslist of menus">
+        <a class="btn btn-primary" role="button" 
+        [routerLink]="menuslist.link">{{menuslist.name}}</a>
+    </ul>
+</div>
+
+<!-- header-end -->

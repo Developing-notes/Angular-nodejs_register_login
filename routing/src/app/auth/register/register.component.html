@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="row">
+        <div class="mt-5 col-md-6 mx-auto">
+            <div class="card">
+                <div class="card-header">
+                    <h3>RegisterationForm</h3>
+                </div>
+                <div class="card-body">
+                    <form class="form" #registerForm="ngForm">
+                        <div class=" form-group">
+                            <label>User Name</label>
+                            <input type="text" class="form-control" [(ngModel)]="userObj.username" name="username"
+                                #name="ngModel" required>
+                            <span class="text-danger"
+                                *ngIf="(name.touched ||
+                                 registerForm.submitted) && name.errors?.required">
+                                User Name is required
+                            </span>
+                        </div>
+                        <div class="mt-3 form-group">
+                            <label>E-Mail</label>
+                            <input type="text" class="form-control" [(ngModel)]="userObj.email" name="email"
+                                #email="ngModel" [pattern]="commonService.pattern.email" required email>
+                            <span class="text-danger"
+                                *ngIf="(email.touched || registerForm.submitted) && email.errors?.required">
+                                E-Mail is required
+                            </span>
+                            <span class="text-danger" *ngIf="email.touched && email.errors?.pattern">
+                                Enter a valid email address
+                            </span>
+                        </div>
+                        <div class="mt-3 form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control" [(ngModel)]="userObj.password" name="password"
+                                #password="ngModel" [pattern]="commonService.pattern.password" required>
+                            <span class="text-danger"
+                                *ngIf="(password.touched || registerForm.submitted) && password.errors?.required">
+                                Password is required
+                            </span>
+                            <span class="text-danger" *ngIf="password.touched && password.errors?.pattern">
+                                Password should have minimum 8 characters, at least 1 uppercase letter, 1 lowercase
+                                letter and 1 number
+                            </span>
+                        </div>
+                        <div class="mt-3 form-group">
+                            <label>Confirm Password</label>
+                            <input type="password" class="form-control" [(ngModel)]="userObj.confirm_password"
+                                name="confirm_password" #confirm_password="ngModel" pattern="{{ password.value }}"
+                                required>
+                            <span class="text-danger"
+                                *ngIf="(confirm_password.touched || registerForm.submitted) && confirm_password.errors?.required">
+                                Confirm Password is required
+                            </span>
+                            <span class="text-danger"
+                             *ngIf="confirm_password.touched &&
+                                 confirm_password.errors?.pattern">
+                                Passwords doesnot match
+                            </span>
+                        </div>
+                        <div class=" mt-3 form-group">
+                            <button type="submit" 
+                            class="btn btn-success text-dark" 
+                            appDirective
+                                (click)="onSubmit()">Register</button>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

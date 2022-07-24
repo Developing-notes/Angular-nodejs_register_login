@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// snackbarcolor
+.mycsssnack-bartest {
+    color: white;
+    background-color: rgb(68, 178, 43);
+   
+}
+.invalid-record{
+    color: white;
+    background-color: rgb(207, 62, 39);
+   
+
+}
+.invalid-password{
+    color:white;
+    background-color: rgb(138, 43, 226);
+    
+}
