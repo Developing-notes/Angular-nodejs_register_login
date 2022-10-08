@@ -17,12 +17,12 @@ export class AppComponent {
     public apiService: ApiService, private httpClient: HttpClient,
     public snackBar: MatSnackBar) { }
 
-  ngOnInit() {
+  ngOnInit() {  
   }
   setRegister() {  
     console.log("enter 2"); 
     this.route.navigate(['/auth/register'])
-  }
+  } 
   viewRecord() {
     this.route.navigate(['/auth/login'])
   }
