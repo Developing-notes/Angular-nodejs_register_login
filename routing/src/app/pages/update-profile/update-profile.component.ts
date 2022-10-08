@@ -46,13 +46,14 @@ export class UpdateProfileComponent implements OnInit {
   constructor(
     public apiService: ApiService,
     public commonService: CommonService,
-    public router: Router,
+    public router: Router,   
     public snackBar: MatSnackBar,
   ) { }
 
+  
 
-
-  ngOnInit() {
+  ngOnInit() {  
+    console.log("ngOninit +++++++++++++++++");
     let value = localStorage.getItem("keys");
     let data = JSON.parse(value);
     this.userProfile.email = data;
