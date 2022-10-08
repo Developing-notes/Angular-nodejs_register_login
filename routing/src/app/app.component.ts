@@ -17,10 +17,10 @@ export class AppComponent {
     public apiService: ApiService, private httpClient: HttpClient,
     public snackBar: MatSnackBar) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {  
+  }   
   setRegister() {
-    console.log("Register++++++++++++++++");
+    console.log("Register")
     this.route.navigate(['/auth/register'])
   }
   viewRecord() {
