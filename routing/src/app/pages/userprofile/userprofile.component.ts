@@ -17,9 +17,10 @@ export class UserprofileComponent implements OnInit {
     username: "",
     email: "",
     user_status: ""
-  };
+  }; 
   id: any;
   ngOnInit() {
+    console.log("Enter++++++++++++++++");
     this.id = this.activatedRoute.snapshot.params["id"];
     this.apiService.postData({ id: this.id }, "user/profile").subscribe((result: any) => {
       this.user_profile.username = result.success.username;
