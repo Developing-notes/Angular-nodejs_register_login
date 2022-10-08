@@ -18,10 +18,11 @@ export class AppComponent {
     public snackBar: MatSnackBar) { }
 
   ngOnInit() {  
-  }   
-  setRegister() {
-    console.log("Register")
-    this.route.navigate(['/auth/register'])
+  }
+  setRegister() {  
+    console.log("Register++++++++++++++++");
+    console.log("oninit+++++++++++++++++++");
+     this.route.navigate(['/auth/register'])
   }
   viewRecord() {
     this.route.navigate(['/auth/login'])
