@@ -19,8 +19,9 @@ export class AppComponent {
 
   ngOnInit() {
   }
-  setRegister() {
+  setRegister() {  
     console.log("Register++++++++++++++++");
+    console.log("oninit+++++++++++++++++++");
     this.route.navigate(['/auth/register'])
   }
   viewRecord() {
