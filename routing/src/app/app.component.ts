@@ -4,8 +4,8 @@ import { MatSnackBar } from '@angular/material';
 import { Router } from '@angular/router';
 import { ApiService } from './api/api.service';
 
-@Component({
-  selector: 'app-root',
+@Component({   
+  selector: 'app-root', 
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
@@ -20,6 +20,7 @@ export class AppComponent {
   ngOnInit() {
   }
   setRegister() {
+    console.log("Register++++++++++++++++");
     this.route.navigate(['/auth/register'])
   }
   viewRecord() {
